@@ -1,52 +1,10 @@
+{% extends 'home/base.html' %}
+
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}izzan's online portofolio{% endblock %}
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
-
-    <title>izzan's online portofolio</title>
-</head>
-<body>
-    <header class="header">
-        <div class="overlay has-fade"></div>
-        <nav class="container container--pall flex flex-jc-sb flex-ai-c">
-            <a href="/" class="header__logo">
-                <img src="{% static 'home/images/logo.svg' %}" alt="Zan"/>
-            </a>
-
-            <a href="#" class="header__toggle hide-for-desktop" id="btnHamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
-
-            <div class="header__links hide-for-mobile">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Project</a>
-                <a href="#">Contact</a>
-                <a href="#">Blog</a>
-            </div>
-
-            <a href="#" class="button header__cta hide-for-mobile">Theme</a>
-        </nav>
-
-        <div class="header__menu has-fade">
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Project</a>
-            <a href="">Contact</a>
-            <a href="">Blog</a>
-        </div>
-
-    </header>
-
+{% block content %}
     <section class="hero">
         <div class="hero__image line-animation">
         </div>
@@ -94,50 +52,4 @@
             </div>
         </div>
     </section>
-    
-    <footer>
-        <a class="footer__logo" href="#">
-            <img src="{% static 'home/images/logo.svg' %}">
-        </a>
-
-        <div class="footer__social">
-            <!--<a href="#">
-                <img src="/images/linkedin.svg" alt="Linkedin">
-            </a>-->
-
-            <a href="#">
-                <img src="{% static 'home/images/facebook.svg' %}" alt="Facebook">
-            </a>
-
-            <a href="#">
-                <img src="{% static 'home/images/twitter.svg' %}" alt="Twitter">
-            </a>
-
-            <a href="#">
-                <img src="{% static 'home/images/instagram.svg' %}" alt="Instagram">
-            </a>
-        </div>
-
-        <div class="footer__links col1">
-            <a href="#">About Me</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
-        </div>
-
-        <div class="footer__links col2">
-            <a href="#">Projects</a>
-            <a href="#">Projects</a>
-            <a href="#">Blog</a>
-        </div>
-
-        <div class="footer__cta">
-            <a href="" class="button">Click Me</a>
-            <div class="footer_copyright">
-                &copy; Ahmad Izzan Zahrial. All Rights Reserved. 
-            </div>
-        </div>
-    </footer>
-
-    <script src="{% static 'home/js/script.js' %}"></script>
-</body>
-</html>
+{% endblock %}
